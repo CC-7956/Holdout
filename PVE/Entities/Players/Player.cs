@@ -1,0 +1,65 @@
+﻿using System.Collections.ObjectModel;
+using System.Text.Json;
+using PVE.Entities.BaseEntity;
+using PVE.Items;
+using PVE.Items.Equipment;
+using PVE.Items.Weapons;
+
+namespace PVE.Entities.Players;
+
+public class Player : Entity, ISaveable
+{
+    private Collection<Item> _inventory = [];
+    private Weapon? Hand { get; set; }
+    private Item? Head { get; set; } = null;
+    private Item? Chest { get; set; } = null;
+    private Item? Legs { get; set; } = null;
+    private Item? Feet { get; set; } = null;
+    public bool IsDeveloper { get; init; }
+
+    private Player(string name, double hp, double dmg, double armor, bool isDeveloper) : base(name, hp, dmg, armor)
+    {
+        IsDeveloper = isDeveloper;
+    }
+    
+    public static Player CreatePlayer(string name, double hp, double dmg, double armor, bool dev)
+    {
+        return new Player(name, hp, dmg, armor, dev);
+    }
+
+    public ReadOnlyCollection<Item> GetInventory =>  _inventory.AsReadOnly();
+    public ReadOnlyCollection<Item> GetWeapons =>  GetInventory.Where(item => item is Weapon).ToList().AsReadOnly();
+    public ReadOnlyCollection<Item> GetArmor =>  GetInventory.Where(item => item is Armor).ToList().AsReadOnly();
+    public override double AttackDMG => BaseDmg + (Hand?.Damage ?? 0);
+    public override double CritRate => CritChance + (Hand?.CritChance ?? 0);
+    
+    
+    public void AddItemToInventory(Item? item)
+    {
+        if (item is not null)
+        {
+            _inventory.Add(item);
+        }
+    }
+    
+    public void EquipWeapon(Weapon weapon)
+    {
+        if(_inventory.FirstOrDefault(i => i == weapon) is not null)
+        {
+            Printer.PrintItemEquipped(weapon);
+            Hand = weapon;
+        }
+        else
+        {
+            Printer.PrintItemDoesNotExist(nameof(weapon));
+        }
+    }
+
+    public void Serialize()
+    {
+        string savePath = Path.Combine(ISaveable.GetSavePath, $"{GetType().Name}.json");
+        JsonSerializerOptions options = new JsonSerializerOptions { WriteIndented = true };
+        string json = JsonSerializer.Serialize(this, options);
+        File.WriteAllText(savePath, json);
+    }
+}

@@ -1,0 +1,181 @@
+AI USAGE LOG
+============
+Project: PVE (Game.sln)
+Purpose: Record of every prompt sent to the AI assistant and every change the
+         assistant made in response.
+
+Format per entry:
+  Date       - when the prompt was sent
+  Prompt     - the user's request, paraphrased to its core demand
+  Changes    - what the AI assistant actually did (files created / moved /
+               edited / deleted). "None" if the answer was informational only.
+
+Note: This log was started on 2026-09-22. Prompts and AI changes made before
+that date were not recorded and are therefore not listed here.
+
+------------------------------------------------------------------------------
+Date: 2026-09-22
+Prompt:
+  Create folder "Dokumentaion", move Context.txt into it, and create
+  AiUsage.txt there to log every prompt and every change made by the AI.
+
+Changes:
+  - Created folder: PVE/Dokumentaion/
+  - Moved:   PVE/Context.txt -> PVE/Dokumentaion/Context.txt
+  - Created: PVE/Dokumentaion/AiUsage.txt (this file)
+  - PVE/Printer.cs was attached as context only; no code changes were made.
+
+Note (added 2026-10-06):
+  All items were AI-generated, including Context.txt, which contains
+  additional data and lore about the items.
+------------------------------------------------------------------------------
+Date: 2026-09-23
+Prompt:
+  Follow these project rules and confirm:
+  - Read-only: do not edit program files or actively contribute; write only
+    when explicitly told. Do not read more into prompts than what is said.
+  - Log every question in PVE/Documentation/AiUsage.txt, oldest entry first.
+  - Act as a thought assistant: generic examples, Clean Code, performance,
+    coding conventions and alternative approaches.
+
+Changes:
+  - None to project files (informational answer only).
+  - Saved these rules to the AI assistant's own memory (outside the project
+    folder) so future sessions follow them.
+------------------------------------------------------------------------------
+Date: 2026-09-23
+Prompt:
+  Fix AiUsage.txt: log prompts as paraphrases of the core demand instead of
+  verbatim copies - no banter, efficient and on point.
+
+Changes:
+  - Edited: PVE/Documentation/AiUsage.txt - Prompt fields of the earlier
+    entries paraphrased; header format note updated to match.
+  - Updated the AI assistant's own memory to paraphrase prompts from now on.
+------------------------------------------------------------------------------
+Date: 2026-09-23
+Prompt:
+  Explain how string.Normalize() works and show an example.
+
+Changes:
+  - None (informational answer only).
+------------------------------------------------------------------------------
+Date: 2026-09-24
+Prompt:
+  Explain how to check a player name for the special name "ImADeveloper"
+  (case-insensitive is fine) to unlock developer abilities: Equals(),
+  Contains(), ContainsAny() or something else?
+
+Changes:
+  - None (informational answer only).
+------------------------------------------------------------------------------
+Date: 2026-10-05
+Prompt:
+  Explain whether List.FirstOrDefault() can hand back its result through an
+  out parameter ("out object obj").
+
+Changes:
+  - None (informational answer only).
+------------------------------------------------------------------------------
+Date: 2026-10-05
+Prompt:
+  Give the actual code for an anonymous object that can be passed as the
+  "Entity" argument of PVE.Printer.PrintLoot.
+
+Changes:
+  - None (request was interrupted by the user before an answer was given).
+------------------------------------------------------------------------------
+Date: 2026-10-05
+Prompt:
+  Explain how the string formatting in this line works:
+  Console.WriteLine($"{"1: Equip Weapon", -10} \t{"2: Use Potion", -10}");
+
+Changes:
+  - None (informational answer only).
+------------------------------------------------------------------------------
+Date: 2026-10-05
+Prompt:
+  Suggest basic attributes for armor classes, both shared and per piece
+  (no special effects like faster boots). Example given: Armor has Defense
+  and Toughness.
+
+Changes:
+  - None (informational answer only).
+------------------------------------------------------------------------------
+Date: 2026-10-05
+Prompt:
+  Add armor items to ZombieLootPool.cs: separate pieces instead of whole
+  armors (no "Iron armor"), all of the generic type Armor (not Helmet,
+  Chestplate, Leggings or Boots for now), at least one set per rarity.
+
+Changes:
+  - Edited: PVE/Entities/Zombie/ZombieLootPool.cs
+    - Added "using PVE.Items.Armor;".
+    - Added 24 Armor items: one 4-piece set (head, chest, legs, feet) per
+      rarity, Common to Developer, each placed at the end of its rarity
+      section.
+    - Added a comma after the last Developer weapon ("Null") so the list
+      could be continued.
+------------------------------------------------------------------------------
+Date: 2026-10-05
+Prompt:
+  Explain whether loading the loot pool from JSON instead of the hard-coded
+  list loses the derived Item types (Weapon, Armor, ...). Reference: the
+  started Load() in ZombieLootPool.cs. No code changes allowed.
+
+Changes:
+  - None (informational answer only).
+------------------------------------------------------------------------------
+Date: 2026-10-06
+Prompt:
+  Explain the different normalization forms of string.Normalize().
+
+Changes:
+  - None (informational answer only).
+------------------------------------------------------------------------------
+Date: 2026-10-06
+Prompt:
+  Explain the best way to get into Program Files, create a save folder
+  there and save files in it.
+
+Changes:
+  - None (informational answer only).
+------------------------------------------------------------------------------
+Date: 2026-10-06
+Prompt:
+  Suggest names for the game (first zombie/undead-themed, then based on
+  the general PvE idea). Decision from the suggestions: the game is called
+  "Holdout" ("the last one standing") from now on.
+
+Changes:
+  - None (informational answer only).
+------------------------------------------------------------------------------
+Date: 2026-10-06
+Prompt:
+  Write a description for the git repo "Holdout" (name checked: no Steam
+  game with that exact name; itch.io duplicates are acceptable).
+
+Changes:
+  - None (informational answer only).
+------------------------------------------------------------------------------
+Date: 2026-10-06
+Prompt:
+  Create CLAUDE.md with all project rules so other AI sessions follow
+  them, and a .gitignore that ignores personal data (.claude, .idea) and
+  the bin and obj folders. Do not commit.
+
+Changes:
+  - Created: CLAUDE.md (repo root) - the project rules for AI sessions.
+  - Created: .gitignore (repo root) - ignores .claude/, .idea/,
+    *.DotSettings.user, bin/ and obj/.
+  - Nothing was staged or committed.
+------------------------------------------------------------------------------
+Date: 2026-10-06
+Prompt:
+  Add to the first log entry that all items were AI-generated, including
+  Context.txt with the additional item data and lore.
+
+Changes:
+  - Edited: PVE/Documentation/AiUsage.txt - added a note to the
+    2026-09-22 entry.
+------------------------------------------------------------------------------

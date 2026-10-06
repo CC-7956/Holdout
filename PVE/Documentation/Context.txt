@@ -1,0 +1,314 @@
+﻿Weapon and Story
+
+Uncommon
+
+    Iron Dagger
+    - Damage: 12
+    Type: Melee
+    Attack Rate: Very Fast
+    Ability: Small chance to cause Bleeding
+    Story: A simple blade recovered from a forgotten survivor who never made it home.
+    
+    Throwing Knife
+    - Damage: 10
+    Type: Ranged / Throwing
+    Attack Rate: Fast
+    Ability: Can be retrieved after hitting enemies
+    Story: A common weapon that has killed more undead than its creator ever imagined.
+    
+    Wooden Bow
+    - Damage: 14
+    Type: Ranged
+    Attack Rate: Medium
+    Ability: Slightly increased arrow speed
+    Story: A hunter's bow found among the remains of those who fought the first outbreak.
+    
+    Zombie Banner
+    Damage: 0
+    Type: Accessory
+    Ability: Increased damage against zombies
+    Story: A symbol carried by the undead that somehow still inspires fear.
+    
+    Bloodied Bandage
+    Healing: Restores 25 HP
+    Type: Consumable
+    Ability: Removes minor bleeding effects
+    Story: The last medical supply of someone who refused to give up.
+    
+    Cursed Bone
+    - Damage: 18
+    Type: Material / Magic
+    Ability: Used to craft undead weapons
+    Story: A fragment of a creature that should have remained buried.
+    
+    Rotten Charm
+    Defense: +2
+    Type: Accessory
+    Ability: Slight resistance to undead attacks
+    Story: A strange charm that somehow survived the corruption untouched.
+    
+    Lesser Healing Potion
+    Healing: Restores 40 HP
+    Type: Consumable
+    Ability: Basic emergency healing
+    Story: A forgotten potion that became more valuable after civilization fell.
+    
+    Hunter's Quiver
+    Bonus: +10% ranged damage
+    Type: Accessory
+    Ability: Increased arrow capacity
+    Story: Once belonging to a hunter who knew exactly where to aim.
+    
+    Lost Adventurer's Map
+    Type: Utility
+    Ability: Reveals nearby unexplored areas
+    Story: A map carried by an adventurer whose journey ended underground.
+
+
+Rare
+
+    Bloodfang Dagger
+    - Damage: 38
+    Type: Melee
+    Attack Rate: Extremely Fast
+    Ability: Applies Bleeding and heals slightly on critical hits
+    Story: A dagger forged from the fang of a creature that fed on blood.
+    
+    Graveyard Blade
+    - Damage: 55
+    Type: Melee
+    Attack Rate: Fast
+    Ability: Releases a ghostly slash projectile
+    Story: A sword buried with a warrior who refused to stay dead.
+    
+    Bone Reaper
+    - Damage: 60
+    Type: Melee
+    Attack Rate: Slow
+    Ability: Wide sweeping attacks with increased range
+    Story: The weapon of an executioner who eventually became one of his victims.
+    
+    Fleshbound Tome
+    - Damage: 48
+    Type: Magic
+    Attack Rate: Medium
+    Ability: Summons a small undead projectile
+    Story: A forbidden book written using the knowledge of the infected.
+    
+    Shadowfang
+    - Damage: 65
+    Type: Melee
+    Attack Rate: Fast
+    Ability: Attacks ignore a small amount of armor
+    Story: A blade that seems to cut the darkness itself.
+    
+    Vilethorn Fragment
+    - Damage: 45
+    Type: Magic
+    Attack Rate: Continuous
+    Ability: Fires piercing corruption spikes
+    Story: A piece of a forgotten weapon corrupted by unnatural forces.
+    
+    Corrupted Essence
+    Damage: 0
+    Type: Material
+    Ability: Used to create corrupted equipment
+    Story: The remaining energy of something that should never have existed.
+    
+    Soul Lantern
+    Type: Accessory
+    Ability: Summons a small light spirit and increases magic power
+    Story: A lantern fueled by souls instead of oil.
+    
+    Deathcap Mushroom
+    Type: Consumable
+    Ability: Temporarily increases damage at the cost of defense
+    Story: A dangerous fungus grown where too many lives were lost.
+    
+    Undead Knight's Helm
+    Defense: +8
+    Type: Armor
+    Ability: Increased melee resistance
+    Story: The helmet of a knight who guarded his kingdom even after death.
+
+
+Epic
+
+    Soulrender
+    - Damage: 120
+    Type: Melee
+    Attack Rate: Medium
+    Ability: Fires a soul wave after consecutive hits
+    Story: A blade that tears pieces of the enemy's spirit away with every strike.
+    
+    Night's Edge
+    - Damage: 135
+    Type: Melee
+    Attack Rate: Fast
+    Ability: Creates dark energy arcs
+    Story: A weapon created when countless cursed blades were fused together.
+    
+    Bloodletter
+    - Damage: 145
+    Type: Melee
+    Attack Rate: Fast
+    Ability: Gains power from enemies below 30% health
+    Story: A weapon designed for finishing battles, not starting them.
+    
+    Gravekeeper's Scythe
+    - Damage: 160
+    Type: Melee
+    Attack Rate: Slow
+    Ability: Summons spectral blades around the player
+    Story: The tool of the final guardian of a forgotten cemetery.
+    
+    Abyssal Cleaver
+    - Damage: 175
+    Type: Melee
+    Attack Rate: Slow
+    Ability: Heavy attacks break enemy armor
+    Story: A weapon recovered from the depths where light cannot reach.
+    
+    Hellforged Greatsword
+    - Damage: 190
+    Type: Melee
+    Attack Rate: Very Slow
+    Ability: Leaves burning trails behind attacks
+    Story: Forged in flames hot enough to melt the souls of the damned.
+    
+    Voidpiercer
+    - Damage: 165
+    Type: Ranged
+    Attack Rate: Fast
+    Ability: Projectiles pass through enemies
+    Story: An ancient weapon designed to kill things that cannot be touched.
+    
+    Reaper's Fang
+    - Damage: 150
+    Type: Melee
+    Attack Rate: Very Fast
+    Ability: Critical hits create phantom blades
+    Story: The fang of death itself, sharpened into a weapon.
+    
+    Darkmatter Staff
+    - Damage: 180
+    Type: Magic
+    Attack Rate: Medium
+    Ability: Fires unstable dark energy
+    Story: A staff containing a fragment of something beyond the stars.
+    
+    Phantom Bow
+    - Damage: 170
+    Type: Ranged
+    Attack Rate: Fast
+    Ability: Fires spectral arrows that ignore walls
+    Story: A bow carried by a hunter who no longer had a body.
+
+Legendary
+
+    Worldbreaker
+    - Damage: 350
+    Type: Melee
+    Attack Rate: Slow
+    Ability: Creates shockwaves that damage everything nearby
+    Story: A weapon said to have cracked mountains with a single strike.
+    
+    The Last Judgment
+    - Damage: 400
+    Type: Melee / Holy
+    Attack Rate: Medium
+    Ability: Calls down a beam of light on enemies
+    Story: The final weapon created before humanity accepted its fate.
+    
+    Heaven's Wrath
+    - Damage: 420
+    Type: Magic
+    Attack Rate: Slow
+    Ability: Summons divine storms
+    Story: A weapon gifted by forces that believed mortals were worth saving.
+    
+    Hell's Verdict
+    - Damage: 430
+    Type: Melee
+    Attack Rate: Slow
+    Ability: Burns enemies and reduces healing
+    Story: The punishment of the underworld given form.
+    
+    Oblivion
+    - Damage: 500
+    Type: Melee
+    Attack Rate: Medium
+    Ability: Erases projectiles and enemies on critical strikes
+    Story: A weapon feared because even legends disappear when it appears.
+    
+    Eclipse
+    - Damage: 460
+    Type: Magic
+    Attack Rate: Fast
+    Ability: Creates a miniature black hole
+    Story: A weapon born during the moment the sun itself vanished.
+    
+    The Black Sun
+    - Damage: 520
+    Type: Magic
+    Attack Rate: Slow
+    Ability: Creates a burning sphere that consumes enemies
+    Story: A fragment of a star that died before the world was created.
+    
+    Soul of the Fallen Star
+    - Damage: 480
+    Type: Ranged
+    Attack Rate: Very Fast
+    Ability: Fires souls that split into multiple projectiles
+    Story: The final memory of a dying celestial being.
+    
+    Dawnbringer
+    - Damage: 500
+    Type: Melee / Holy
+    Attack Rate: Fast
+    Ability: Deals massive bonus damage to undead
+    Story: The first weapon forged after humanity saw light again.
+    
+    The Devourer
+    - Damage: 550
+    Type: Melee
+    Attack Rate: Medium
+    Ability: Gains damage for every enemy consumed
+    Story: A weapon that does not kill its enemies; it consumes their existence.
+
+Developer
+
+    Genesis
+    - Damage: 9999
+    Type: All Types
+    Attack Rate: Instant
+    Ability: Creates and destroys matter; ignores all defenses
+    Story: The first weapon ever created, existing before the concept of weapons itself.
+    
+    The Hand of Creation
+    - Damage: 9999
+    Type: Melee / Reality
+    Attack Rate: Instant
+    Ability: Rewrites reality with every strike
+    Story: The tool used by the creator to shape worlds from nothing.
+    
+    Armageddon
+    - Damage: 99999
+    Type: Magic
+    Attack Rate: One Use
+    Ability: Causes complete battlefield destruction
+    Story: The weapon that ends every war by ensuring there is nothing left to fight over.
+    
+    The Final Authority
+    - Damage: Infinite
+    Type: All Types
+    Attack Rate: Absolute
+    Ability: Overrides every rule, including death
+    Story: The final command written into existence itself.
+    
+    Null
+    - Damage: Unknown
+    Type: Unknown
+    Attack Rate: Unknown
+    Ability: Removes whatever it touches from reality
+    Story: A weapon that was never created, because creation itself cannot describe it.

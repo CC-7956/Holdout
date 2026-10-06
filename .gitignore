@@ -1,0 +1,8 @@
+# Personal data and IDE settings
+.claude/
+.idea/
+*.DotSettings.user
+
+# Build output
+bin/
+obj/

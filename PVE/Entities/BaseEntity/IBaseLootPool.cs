@@ -2,7 +2,7 @@
 
 namespace PVE.Entities.BaseEntity;
 
-public interface IBaseLootPool<out T> where T : Item
+public interface IBaseLootPool<out T> where T : IBaseLootPool<T>
 {
-    public void DeserializeLootPool();
+    public T DeserializeLootPool();
 }

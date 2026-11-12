@@ -179,3 +179,35 @@ Changes:
   - Edited: PVE/Documentation/AiUsage.txt - added a note to the
     2026-09-22 entry.
 ------------------------------------------------------------------------------
+Date: 2026-10-09
+Prompt:
+  Explain whether to create custom exceptions or use the existing .NET
+  exceptions with a custom message when throwing errors on purpose.
+
+Changes:
+  - None (informational answer only).
+------------------------------------------------------------------------------
+Date: 2026-10-09
+Prompt:
+  Explain how one try-catch can catch multiple exception types (assumed
+  syntax: "|").
+
+Changes:
+  - None (informational answer only).
+------------------------------------------------------------------------------
+Date: 2026-11-11
+Prompt:
+  Back up this entire Claude Code conversation completely and faithfully
+  into the Holdout directory: structured JSON with all messages, tool
+  calls, instructions, permissions and artifacts, plus a manifest and a
+  completeness report; do not overwrite existing files.
+
+Changes:
+  - Created (repo root, untracked, nothing staged or committed):
+    - Holdout_ConversationBackup_2026-11-11.json (main backup)
+    - Holdout_ConversationBackup_2026-11-11_MANIFEST.json
+    - Holdout_ConversationBackup_2026-11-11_raw-1_session-654cd62a.jsonl
+    - Holdout_ConversationBackup_2026-11-11_raw-2_session-56293807.jsonl
+    - Holdout_ConversationBackup_2026-11-11_raw-3_session-3925418c.jsonl
+  - The email address and account IDs are redacted in all backup files.
+------------------------------------------------------------------------------

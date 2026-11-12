@@ -1,4 +1,5 @@
-﻿using PVE.Entities.BaseEntity;
+﻿using System.Globalization;
+using PVE.Entities.BaseEntity;
 using PVE.Items;
 
 namespace PVE;
@@ -78,6 +79,16 @@ public abstract class Printer
             Console.ResetColor();
         }
     }
+    
+    public static void PrintNumberedList(List<string> items)
+    {
+        Console.Clear();
+        for(int line = 0; line < items.Count; line++)
+        {
+            Console.Write($"{line + 1}: ");
+            Console.WriteLine(items[line]);
+        }
+    }
 
     public static void PrintInventoryChoice()
     {
@@ -118,5 +129,26 @@ public abstract class Printer
         Console.Write($"{item.Name}");
         Console.ResetColor();
         Console.WriteLine(" equipped");
+    }
+
+    public static void PrintSaveFailed(string origin,string expectedPath, string json = "")
+    {
+        Console.WriteLine($"Failed to save {origin}");
+        if (!string.IsNullOrEmpty(json))
+        {
+            Console.WriteLine($"Manuely save in {expectedPath}");
+            Console.WriteLine(json);
+        }
+    }
+    
+    public static void PrintLoadFailed(string origin)
+    {
+        Console.WriteLine($"Failed to load {origin}");
+        Console.WriteLine($"Check the file and restart the game");
+    }
+
+    public static void PrintAskForSavefile()
+    {
+        Console.WriteLine();
     }
 }

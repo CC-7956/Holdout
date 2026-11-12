@@ -32,8 +32,7 @@ public abstract class Utils
 
     private static int HandleDevCommand(Player p)
     {
-        var choice = 0;
-        do
+        while(true)
         {
             Printer.PrintInputRequest();
             string input = GetPlayerInput();
@@ -44,24 +43,39 @@ public abstract class Utils
                     p.AddItemToInventory(i);
                 continue;
             }
-            if (int.TryParse(input, out choice)) ;
-        } while (choice is < 1 or > 4);
-        return  choice;
+            
+            if (int.TryParse(input, out int choice) && choice is < 1 or > 4)
+                return choice;
+        }
     }
 
     private static int GetActionChoice()
     {
-        var choice = 0;
-        do
+        while(true)
         {
             Printer.PrintInputRequest();
-            if (int.TryParse(GetPlayerInput(), out choice)) ;
-        } while (choice is < 1 or > 4);
-        return  choice;
+            if (int.TryParse(GetPlayerInput(), out int choice) && choice is < 1 or > 4)
+                return choice;
+        }
     }
 
     public static void WaitForInput()
     {
         Console.ReadKey();
+    }
+    
+    public static int GetAllowedIndex(int maxIndex)
+    {
+        if(maxIndex <= 0)
+            throw new ArgumentException("maxIndex must be greater than 0");
+        while (true)
+        {
+            Printer.PrintInputRequest();
+            string input = Utils.GetPlayerInput();
+            if (int.TryParse(input, out int index) && index > 0 && index <= maxIndex)
+            {
+                return index-1;
+            }
+        }
     }
 }

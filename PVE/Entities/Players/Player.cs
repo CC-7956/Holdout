@@ -1,14 +1,17 @@
 ﻿using System.Collections.ObjectModel;
+using System.Security;
 using System.Text.Json;
 using PVE.Entities.BaseEntity;
+using PVE.Exceptions;
 using PVE.Items;
 using PVE.Items.Equipment;
 using PVE.Items.Weapons;
 
 namespace PVE.Entities.Players;
 
-public class Player : Entity, ISaveable
+public class Player : Entity, ISavable
 {
+    private const string FileName = nameof(Player);
     private Collection<Item> _inventory = [];
     private Weapon? Hand { get; set; }
     private Item? Head { get; set; } = null;
@@ -57,9 +60,33 @@ public class Player : Entity, ISaveable
 
     public void Serialize()
     {
-        string savePath = Path.Combine(ISaveable.GetSavePath, $"{GetType().Name}.json");
-        JsonSerializerOptions options = new JsonSerializerOptions { WriteIndented = true };
-        string json = JsonSerializer.Serialize(this, options);
-        File.WriteAllText(savePath, json);
+        
+        string savePath = Path.Combine(ISavable.GetSavePath, $"{FileName}.json");
+        string json = JsonSerializer.Serialize(this, ISavable.GetJsonOptions);
+        try
+        {
+            File.WriteAllText(savePath, json);
+        }
+        catch
+        {
+            Printer.PrintSaveFailed(FileName, savePath, json);
+            throw;
+        }
+    }
+    
+    public Player Deserialize()
+    {
+        string savePath = Path.Combine(ISavable.GetSavePath, $"{FileName}.json");
+        string fileContent = File.ReadAllText(savePath);
+        try
+        {
+            return JsonSerializer.Deserialize<Player>(fileContent, ISavable.GetJsonOptions) ??
+                   throw new SaveFileCorruptedException($"{FileName} savefile was not able to be read or is empty", fileContent);
+        }
+        catch
+        {
+            Printer.PrintLoadFailed(FileName);
+            throw;
+        }
     }
 }

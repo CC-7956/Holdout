@@ -6,7 +6,7 @@ using PVE.Items.Weapons;
 
 namespace PVE.Entities.Zombies;
 
-public class ZombieLootPool : IBaseLootPool<Item>, ISaveable
+public class ZombieLootPool : IBaseLootPool<ZombieLootPool>, ISavable
 {
     public IReadOnlyCollection<Item> LootPool { get; } =
     [
@@ -102,16 +102,24 @@ public class ZombieLootPool : IBaseLootPool<Item>, ISaveable
 ];
 
 
-    public void DeserializeLootPool()
+    public ZombieLootPool DeserializeLootPool()
     {
-        throw new NotImplementedException();
+    #if DEBUG
+        string savePath = Path.Combine(@"C:\Development\Projects\C#\Holdout\PVE\Entities\Zombies", $"{GetType().Name}.json"); 
+    #else
+        string savePath = Path.Combine(ISavable.GetSavePath, $"{GetType().Name}.json");
+    #endif
+        
+        string json = File.ReadAllText(savePath);
+        return JsonSerializer.Deserialize<ZombieLootPool>(json, ISavable.GetJsonOptions) ?? throw new Exception("Failed to load ZombieLootPool");
     }
-
+    
     public void Serialize()
     {
-        string savePath = Path.Combine(ISaveable.GetSavePath, $"{GetType().Name}.json");
-        
-        string json = JsonSerializer.Serialize(this, ISaveable.GetJsonOptions);
+    #if DEBUG
+        string savePath = Path.Combine(@"C:\Development\Projects\C#\Holdout\PVE\Entities\Zombies", $"{GetType().Name}.json");
+        string json = JsonSerializer.Serialize(this, ISavable.GetJsonOptions);
         File.WriteAllText(savePath, json);
+    #endif
     }
 }

@@ -7,15 +7,20 @@ using PVE.Items.Weapons;
 
 namespace PVE;
 
-public interface ISaveable
+public interface ISavable
 {
-    private static readonly string _topLevePath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-    private static readonly string _gameName = "Holdout";
-    private static readonly string _saveFolder = "Saves";
-    private static readonly string _dataFolder= "Data";
+    #if DEBUG
+    private static readonly string TopLevePath = @"C:\Development\Projects\C#";
+    #else
+    private static readonly string TopLevePath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+    #endif
     
-    public static string GetSavePath => Path.Combine(_topLevePath, _gameName, _saveFolder);
-    public static string GetDataPath => Path.Combine(_topLevePath, _gameName, _dataFolder);
+    private static readonly string GameName = "Holdout";
+    private static readonly string SaveFolder = "Saves";
+    private static readonly string DataFolder= "Data";
+    
+    public static string GetSavePath => Path.Combine(TopLevePath, GameName, SaveFolder);
+    public static string GetDataPath => Path.Combine(TopLevePath, GameName, DataFolder);
     
     public static JsonSerializerOptions GetJsonOptions =>  new JsonSerializerOptions
     {
